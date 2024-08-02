@@ -1,0 +1,111 @@
+.home-page {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  grid-auto-rows: 100%;
+  gap: 1rem;
+}
+.home-page .right-grid {
+  opacity: 0;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 2rem;
+  animation: fadeInLeft 1s 2s forwards;
+}
+.home-page .left-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+.home-page .left-grid .text-zone {
+  border: 2px solid white;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  gap: 1rem;
+}
+.home-page .left-grid .text-zone h1 {
+  color: var(--color-white);
+  font-size: var(--fs-56);
+  font-weight: 400;
+  line-height: 4rem;
+  white-space: nowrap;
+}
+.home-page .left-grid .text-zone h1 img {
+  margin-left: 1rem;
+  display: none;
+}
+.home-page .left-grid .text-zone h1 ._15 {
+  margin-left: 1rem;
+}
+.home-page .left-grid .text-zone h2 {
+  font-size: var(--fs-16);
+  font-weight: normal;
+}
+.home-page .left-grid .text-zone .contact-button {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--color-white);
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1rem;
+  font-family: "Space Grotesk";
+  letter-spacing: 2px;
+  white-space: nowrap;
+  padding: 0.8rem 1.2rem;
+  background-color: transparent;
+  border: 2px solid var(--color-white);
+  animation: fadeIn 1s 1.8s backwards;
+}
+.home-page .left-grid .text-zone .contact-button:hover {
+  transition: all ease-in 0.2s;
+  color: var(--accent);
+}
+
+@media (max-width: 950px) {
+  .home-page {
+    display: flex;
+  }
+  .home-page .left-grid .text-zone h1 {
+    font-size: var(--fs-48);
+  }
+}
+@media (max-width: 765px) {
+  .home-page {
+    display: flex;
+  }
+  .home-page .left-grid {
+    width: 100%;
+  }
+  .home-page .left-grid .text-zone h1 {
+    font-size: var(--fs-56);
+  }
+  .home-page .left-grid .text-zone h1 img {
+    opacity: 0;
+    animation: rotateIn 1s 0.5s linear both;
+    display: inline-block;
+  }
+  .home-page .left-grid .text-zone h1 ._15 {
+    display: none;
+  }
+  .home-page .right-grid {
+    display: none;
+  }
+}
+@media (max-width: 515px) {
+  .home-page .left-grid .text-zone h1 {
+    font-size: var(--fs-48);
+  }
+}
+@media (max-width: 415px) {
+  .home-page .left-grid .text-zone h1 {
+    font-size: 2.35rem;
+  }
+}/*# sourceMappingURL=index.css.map */

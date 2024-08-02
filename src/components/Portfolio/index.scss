@@ -1,0 +1,100 @@
+.portfolio-page{
+    height: auto;
+    padding: 2rem 1rem;
+    color: var(--color-white);
+    h1{
+        display: inline-flex;
+        font-weight: 400;
+        text-decoration: underline;
+        text-decoration-color: var(--accent);
+        margin: 1rem 0;
+     } 
+
+         .projects-wrapper{
+            padding: 1rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: .5rem;
+            .project-card{
+               width: 400px;
+               height: auto;
+
+               .project-img{
+                width: 100%;
+                height: auto;
+
+                img{
+                    width: 100%;
+                }
+               }
+
+               .project-meta{
+                margin: 1rem 0;
+
+                .cta{
+                    margin-top: 1rem;
+                    display: flex;
+                    gap: 1rem;
+
+                    button{
+                        font-family: 'Space Grotesk';
+                        background: 0 0;
+                        font-size: .9rem;
+                        text-decoration: none;
+                        padding: .5rem 1.2rem;
+                        border: 1px solid var(--color-white);
+                        float: right;
+                        cursor: pointer;
+                      
+
+                        a{
+                            color: var(--color-white);
+                            text-decoration: none;
+                            &:hover{
+                                color: var(--accent);
+                            }
+                        }
+                    }
+                }
+                }
+               }
+            }
+ }
+
+@media (max-width:900px) {
+    .portfolio-page{
+        .projects-wrapper{
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media (max-width:400px){
+    .portfolio-page{
+        .projects-wrapper{
+            grid-template-columns: 1fr;
+            .project-card{
+                width: 280px;
+                height: auto;
+ 
+                .project-img{
+                 width: 100%;
+                 height: auto;
+ 
+                 img{
+                     transform: scale(.8);
+                 }
+                }
+
+                .project-meta{
+                    margin: .5rem 0;
+                    transform: scale(.85);
+                }
+            }
+        }
+    }
+}
